@@ -1,0 +1,19 @@
+ID: sol_demo_application
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: sol_demo_application_db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi_sol_demo_application
+
+resources:
+ - name: hdi_sol_demo_application
+   parameters:
+      config:
+         schema: sol_demo_application
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container

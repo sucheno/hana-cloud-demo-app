@@ -1,0 +1,4 @@
+VIEW "views::active_customers" 
+AS SELECT ID, NAME
+FROM "tables::customers" 
+WHERE ACTIVE = '1'

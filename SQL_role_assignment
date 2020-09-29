@@ -1,0 +1,8 @@
+-- **********  NOTE: This SQL will work only in SQL Console (Admin)  **********  
+
+set schema "schema_name_here#DI";
+create local temporary column table "#ROLES" like "_SYS_DI"."TT_SCHEMA_ROLES";
+insert into "#ROLES" ("ROLE_NAME", "PRINCIPAL_SCHEMA_NAME", "PRINCIPAL_NAME") values ('role_name_here', '', 'user_name_here');
+call "schema_name_here#DI"."GRANT_CONTAINER_SCHEMA_ROLES"("#ROLES", "_SYS_DI"."T_NO_PARAMETERS", ?, ?, ?);
+--call "schema_name_here#DI"."REVOKE_CONTAINER_SCHEMA_ROLES"("#ROLES", "_SYS_DI"."T_NO_PARAMETERS", ?, ?, ?);
+drop table "#ROLES";

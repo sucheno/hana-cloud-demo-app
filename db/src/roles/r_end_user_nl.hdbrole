@@ -1,0 +1,19 @@
+{
+  "role": {
+    "name": "roles::r_end_user_nl",
+    "object_privileges": [
+      {
+        "name": "models::cv_customers",
+        "type": "VIEW",
+        "privileges": [
+          "SELECT"
+        ]
+      }
+    ],
+    "schema_analytic_privileges":[
+      {
+        "privileges": ["authorizations::ap_nl_data"]
+      }
+    ]
+  }
+}
