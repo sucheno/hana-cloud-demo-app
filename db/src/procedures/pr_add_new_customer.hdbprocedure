@@ -4,6 +4,7 @@ PROCEDURE "procedures::pr_add_new_customer"(IN ID INTEGER, IN NAME NVARCHAR(256)
 BEGIN
  IF ID <> NULL OR NAME <> '' THEN
   INSERT INTO "tables::customers" values (ID,NAME,ACTIVE,COUNTRY);
+  MSG := 'Customer added sucessfully..';
  ELSE
  MSG := 'Please check Customer ID / Name  and try again...';
  END IF;
