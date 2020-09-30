@@ -1,1 +1,1 @@
-# hana-cloud-demo-app
+# sol_demo_application
