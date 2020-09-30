@@ -2,7 +2,7 @@ PROCEDURE "procedures::pr_add_new_customer"(IN ID INTEGER, IN NAME NVARCHAR(256)
    LANGUAGE SQLSCRIPT
    SQL SECURITY INVOKER AS
 BEGIN
- IF ID <> NULL AND NAME <> '' THEN
+ IF ID <> NULL OR NAME <> '' THEN
   INSERT INTO "tables::customers" values (ID,NAME,ACTIVE,COUNTRY);
  ELSE
  MSG := 'Please check Customer ID / Name  and try again...';
